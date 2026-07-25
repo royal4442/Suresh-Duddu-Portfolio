@@ -14,6 +14,52 @@
     scroll-behavior:smooth;
 }
 
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    color:#38bdf8;
+    cursor:pointer;
+}
+
+@media (max-width:768px){
+
+    header{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:center;
+        padding:18px 25px;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    nav{
+        position:absolute;
+        top:80px;
+        left:0;
+        width:100%;
+        background:#111827;
+
+        display:none;
+    }
+
+    nav.active{
+        display:block;
+    }
+
+    nav ul{
+        flex-direction:column;
+        align-items:center;
+        padding:20px 0;
+    }
+
+    nav ul li{
+        margin:15px 0;
+    }
+}
+
 body{
 
     font-family:'Poppins',sans-serif;
@@ -940,3 +986,4 @@ header{
 #themeToggle:hover{
     background:#38bdf8;
 }
+
