@@ -1,21 +1,3 @@
-
-const menuToggle = document.querySelector(".menu-toggle");
-const nav = document.querySelector("nav");
-
-menuToggle.addEventListener("click", () => {
-    nav.classList.toggle("active");
-});
-
-document.querySelectorAll("nav a").forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        nav.classList.remove("active");
-
-    });
-
-});
-
 // ===============================
 // Smooth Scrolling
 // ===============================
@@ -276,7 +258,40 @@ toggle.onclick = ()=>{
 
 };
 
+// ===============================
+// Mobile Menu
+// ===============================
 
+const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector("nav");
+
+menuToggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+
+    const icon = menuToggle.querySelector("i");
+
+    if(nav.classList.contains("active")){
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-times");
+    }else{
+        icon.classList.remove("fa-times");
+        icon.classList.add("fa-bars");
+    }
+});
+
+document.querySelectorAll("nav a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        nav.classList.remove("active");
+
+        const icon = menuToggle.querySelector("i");
+        icon.classList.remove("fa-times");
+        icon.classList.add("fa-bars");
+
+    });
+
+});
 // ===============================
 // Console Welcome
 // ===============================
