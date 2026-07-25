@@ -822,26 +822,16 @@ footer p{
     margin-top:30px;
 }
 
-nav ul{
-    flex-wrap:wrap;
-    justify-content:center;
-}
-
-nav ul li{
-    margin:10px;
-}
 
 }
 
 @media(max-width:768px){
 
 header{
-    flex-direction:column;
-    padding:20px;
-}
-
-.logo{
-    margin-bottom:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 25px;
 }
 
 .hero-left h1{
